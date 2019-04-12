@@ -46,3 +46,15 @@ Chicago Haunted History
     -L&L Tavern
 10. This uptown lounge was Al Capone's favorite spot and has hidden tunnels and the occasional ghostly activty. 
     -Green Mill Cocktail Lounge
+
+Background-image:
+https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg
+
+Bean at night image:
+https://www.hauntedrooms.com/wp-content/uploads/2018/02/chicago-haunted-hotels.jpg
+
+Incorrect ghost image:
+https://www.logolynx.com/images/logolynx/ad/ad5172e4d0f50b1f80da99275472c636.jpeg
+
+Correct ghost image:
+http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg
