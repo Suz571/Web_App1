@@ -22,3 +22,27 @@ Follow a11y best practices.
 Refer back to the checkpoints on accessibility and forms for help.
 Use responsive design.
 Be fully usable by keyboard (which will be easy enough if you start with a form).
+
+
+Quiz Questions and Answers:
+Chicago Haunted History
+1. Most haunted room in the Congress Hotel?
+    -Room 441
+2. In 1924 what two rich University of Chicago students  murdered a 14 year old boy "just because"?
+    -Leopold and Leob
+3. What hotel can a "Woman in Red" be seen haunting the 10th floor after supposedly jumping to her death after discovering her philardering husband? 
+    -The Drake Hotel
+4. "Death Alley", where 602 dead bodies were placed after burning to death in the new "fire proof" theatre, is located behind which modern-day theatre? 
+    -Nederlander Theatre (Oriental Theatre)
+5. Where was John Dillenger, Public Enemy #1, gunned down after being betrayed by a "woman in red"?
+    -Biograph Theatre
+6. Roses are red, so is blood. What is was the bloodiest day in Chicago mob histroy? 
+    -St. Valentine's day 
+7. Urban legend has that this house, turned museum, was once where a baby, born with scales, horns, and hooves, was abadoned and locked in the attic until its death? 
+    -Hull House
+8. Is what neighborhood was H.H. Holmes' murder castle located?
+    -Englewood 
+9. Both Jeffery Dahmer and John Wayne Gacy have been said to frequent this Lakeview tavern
+    -L&L Tavern
+10. This uptown lounge was Al Capone's favorite spot and has hidden tunnels and the occasional ghostly activty. 
+    -Green Mill Cocktail Lounge
