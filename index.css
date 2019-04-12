@@ -20,6 +20,9 @@ header, h1 {
     background: #939393;
     
     }
+h1 {
+  width: 98%;
+}
 
 .start_board{
   text-align: center;
