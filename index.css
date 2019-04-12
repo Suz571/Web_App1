@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-family: 'Oswald', sans-serif;
+    
 }
 
 body {
@@ -9,21 +9,19 @@ body {
     padding: 0;
 }
 
-.main_header, .board {
+.main_header,  {
+    font-family: 'Oswald', sans-serif;
     width: 98%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: .5em;
-}
-
-.main_header {
     height: 7em;
     background: #939393;
-
 }
 
-.board {
+
+.main {
     background: #e8e8e8;		
     height: 71em;
     display: flex;
