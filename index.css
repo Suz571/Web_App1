@@ -47,6 +47,22 @@ h2 {
   margin-right: auto;
   margin-top: 25%;
   height: 5em;
+  font-size: 35px;
+}
+
+button{
+  /*display: block; */
+	min-height: 80px;
+	min-width: 80px;
+	margin-bottom: 1.5em;
+	font-size: 2em;
+	border: none;
+	background-color: #484848;
+	color:	#F0F0F0;
+	border-radius: 5px;
+	padding: .5em 1em;
+	width: 60%;
+	max-width: 200px;
 }
 /*
 .question_header {
