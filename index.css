@@ -8,9 +8,13 @@ body {
     margin: 0;
     padding: 0;
 }
+.container{
+  height: 100%;
+  width: 100%;
+}
 
-header, h1 {
-    font-family: 'Oswald', sans-serif;
+header {
+    
     width: 98%;
     text-align: center;
     margin-left: auto;
@@ -21,7 +25,8 @@ header, h1 {
     
     }
 h1 {
-  width: 98%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 55px;
 }
 
 .start_board{
