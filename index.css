@@ -31,10 +31,10 @@ h1 {
 
 .start_board{
   text-align: center;
+  background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
 }
 
-main {
-    
+main {    
   background: #e8e8e8;		
   height: 71em;
   display: flex;
@@ -64,20 +64,50 @@ button{
 	width: 60%;
 	max-width: 200px;
 }
-/*
-.question_header {
-    width: 100%;
-    background: #939393;
-    height: 4em; 
+
+.quiz-page{
+  dislay: flex;
+
 }
 
-.question_column {
-    width: 33%;
-	margin-top: 0.5em;
-	margin-left: .5em;
-	margin-right: .5em;			
-	background: #cfcfcf;
-	height: 70.5em;
-	display: flex;
-	flex-direction: column;
+#question { /*#quiz*/
+  margin: 0;
+
+}
+
+form {
+  background-color: #F5F5F5;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  border: 1px soild black;
+
+}
+
+label {
+  font-size: 25px;
+  margin: auto;
+}
+
+#score_banner {
+  background-color: #404040;
+  color: #F8F8F8;
+  font-style: bold;
+  font-size: 20px;
+}
+
+#js-submit-button {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+
+.results_board {
+  text-align: center;
+  background-image: url("http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg");
 }
