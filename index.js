@@ -1,3 +1,13 @@
+function startButtonAction() {
+    $('.js-start-button').click((e)=>{
+        nextQuestion();
+    })
+}
+
+
+
+
+
 
 const questionNumber = 0;
 const score = 0;
@@ -45,6 +55,25 @@ function quizTemplate() {
         //reStartQuiz();
        // $('.questionNum').question(10)
     }
+
+function submitButtonAction(){
+    $('.container').on('click','#js-submit-button', (e)=>{
+        e.preventDefault()
+
+        const userAnswer = $('input:checked');
+
+        const answerIsCorrect = checkUserAnswer(userAnswer);
+            if (answerIsCorrect){
+                correctFeedback();
+            } else {
+                incorrectFeedback();
+            }
+    });
+}
+
+
+
+
 
     function generateResults(correctAnswers){
         $('.container').html(
