@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <main class ="board" role ="main">
+        <section class ="container" role= "container">
+                <header class="main_header" role="main_header">
+                        <h1>Chicago Haunted History Quiz</h1>
+                </header>
+             <section class="quiz-page" role= "main">
+                <div id="score_banner">
+                    <h2>
+                        <ul>
+                            <li>
+                                <span id="question-count">#/10</span>
+                            </li>
+                            <li>
+                                <span id="score-count">Score: #/#</span>
+                            </li>
+                        </ul> `
+                    </h2>           
+                </div>   
+                <div id="question_field">
+                    <h2> Question </h2>
+                    <form>
+                        <fieldset>
+                            <label class="answerChoices">
+                                <input type="radio" value="${QUIZ[questionNumber].answers[0]}"
+                                name="answer" required></input>
+                            </label>
+                            <label class="answerChoices">
+                                <input type="radio" value="${QUIZ[questionNumber].answers[1]}"
+                                name="answer" required></input>
+                            </label>
+                            <label class="answerChoices">
+                                <input type="radio" value="${QUIZ[questionNumber].answers[2]}"
+                                name="answer" required></input>
+                            </label>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </fieldset>
+                    </form>   
+                </div>                 s
+            </section>`
+</section>
+</main>
+</body>
+</html>

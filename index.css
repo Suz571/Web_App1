@@ -1,3 +1,5 @@
+/*intro page */
+
 * {
     box-sizing: border-box;
     
@@ -64,20 +66,45 @@ button{
 	width: 60%;
 	max-width: 200px;
 }
-/*
-.question_header {
-    width: 100%;
-    background: #939393;
-    height: 4em; 
+
+/*question page */
+
+.quiz-page{
+ text-align: center;
+
 }
 
-.question_column {
-    width: 33%;
-	margin-top: 0.5em;
-	margin-left: .5em;
-	margin-right: .5em;			
-	background: #cfcfcf;
-	height: 70.5em;
+#score_banner{
+display: block;  
+text-align: center;
+margin: auto;
+}
+
+
+form {
+background-color: #D3D3D3;
+}
+
+fieldset{
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 10%;
+	min-height: 500px;
+	border: none;
+}
+
+label{
+	margin-bottom: 1em;
+  font-size: 1.5em;
+  /*
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 22px
+    */
 }
