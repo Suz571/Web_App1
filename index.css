@@ -69,29 +69,45 @@ button{
 
 /*question page */
 
-.quiz-page{
+/*.quiz-page{
  text-align: center;
+ 
+}*/
 
-}
+
 
 #score_banner{
-display: block;  
+/*display: block;  */
 text-align: center;
 margin: auto;
+padding-bottom: 10px;
+
 }
+ #question-count, #score-count{
+   font-size: 25px;
+ }
+
 
 
 form {
 background-color: #D3D3D3;
+
+}
+h3{
+  font-size: 35px;
+  text-align: center;
 }
 
 fieldset{
-	display: flex;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+/*	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 0 10%;
 	min-height: 500px;
-	border: none;
+	border: none; */
 }
 
 label{
