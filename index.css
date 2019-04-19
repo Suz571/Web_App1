@@ -102,25 +102,71 @@ fieldset{
   border: none;
   margin: 0 auto;
   text-align: center;
-/*	display: flex;
+  display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 0 10%;
 	min-height: 500px;
-	border: none; */
+	border: none; 
 }
 
 label{
 	margin-bottom: 1em;
   font-size: 1.5em;
-  /*
-    padding: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    color: #ffffff;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    line-height: 22px
-    */
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  line-height: 22px
+  
+    
+}
+.answerChoices {
+color: black;
+width: 1.1em;
+height: 1.1em;
+vertical-align: middle;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/*feedback page */
+
+#feedback_field{
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 10%;
+	min-height: 500px;
+	border: none;
+}
+
+#feedback_image{
+  width: 250px;
+  height: 250px;
+  display: block;
+  
+  background-color: rgb(63, 64, 65);
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 20px
+}
+
+p{
+  color: white;
+  font-size: 25px;
+  font-style: bold;
+}
+
+h4{
+  font-size: 20px;
+
 }
