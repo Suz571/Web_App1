@@ -4,11 +4,6 @@ function startButtonAction() {
     })
 }
 
-
-
-
-
-
 const questionNumber = 0;
 const score = 0;
 
@@ -17,7 +12,7 @@ const score = 0;
 function quizTemplate() {
     if (questionNumber < QUIZ.length){
         return 
-            <section class="quiz-page" role= "amin">
+            <section class="quiz-page" role= "main">
                 <div id="score_banner">
                     <h2>
                         <ul>
@@ -54,6 +49,12 @@ function quizTemplate() {
         generateResults();
         //reStartQuiz();
        // $('.questionNum').question(10)
+    }
+
+    function generateQuiz(){
+        $('#js-start-button').on('click'){
+            quizTemplate()
+        }
     }
 
 function submitButtonAction(){
