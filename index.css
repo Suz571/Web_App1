@@ -7,10 +7,20 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    
 }
-.container{
-  height: 100%;
+
+
+.container-start{
+  height:100%;
   width: 100%;
+
+  
+
 }
 
 header {
@@ -22,24 +32,30 @@ header {
     margin-top: .5em;
     height: 5em;
     background: #939393;
-    
+    margin-bottom: 1px;
     }
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 55px;
+  margin: 0%;
+  
 }
 
 .start_board{
   text-align: center;
-  background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
+
+ 
 }
 
 main {    
-  background: #e8e8e8;		
+ /* background: #e8e8e8;		*/
   height: 71em;
   display: flex;
   flex-direction: row;
+
 }
+
 h2 {
   font-family: 'Lato', sans-serif;
   text-align: center;
