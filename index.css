@@ -25,105 +25,188 @@ body {
 
 header {
     
-    width: 98%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: .5em;
-    height: 5em;
-    background: #939393;
-    margin-bottom: 1px;
-    }
-
-h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 55px;
-  margin: 0%;
-  
-}
-
-.start_board{
-  text-align: center;
-
- 
-}
-
-main {    
- /* background: #e8e8e8;		*/
-  height: 71em;
-  display: flex;
-  flex-direction: row;
-
-}
-
-h2 {
-  font-family: 'Lato', sans-serif;
+  width: 98%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25%;
+  margin-top: .5em;
   height: 5em;
-  font-size: 35px;
+  background: #939393;
+  
+  }
+h1 {
+font-family: 'Oswald', sans-serif;
+font-size: 55px;
+}
+
+.start_board{
+text-align: center;
+}
+
+main {
+  
+background: #e8e8e8;		
+height: 71em;
+display: flex;
+flex-direction: row;
+}
+h2 {
+font-family: 'Lato', sans-serif;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 8%;
+margin-bottom: 5%;
+height: 5em;
+font-size: 35px;
 }
 
 button{
-  /*display: block; */
-	min-height: 80px;
-	min-width: 80px;
-	margin-bottom: 1.5em;
-	font-size: 2em;
-	border: none;
-	background-color: #484848;
-	color:	#F0F0F0;
-	border-radius: 5px;
-	padding: .5em 1em;
-	width: 60%;
-	max-width: 200px;
+/*display: block;*/ 
+min-height: 80px;
+min-width: 80px;
+margin-bottom: 1.5em;
+font-size: 2em;
+border: none;
+background-color: #484848;
+color:	#F0F0F0;
+border-radius: 5px;
+padding: .5em 1em;
+width: 60%;
+max-width: 200px;
+margin-top: 8%;
 }
 
-.quiz-page{
-  display: flex;
+/*question page */
+
+
+#score_banner{
+display: block;  
+text-align: center;
+margin: auto;
+padding-bottom: 5px;
+margin-bottom: 5px;
+
+
+}
+#question-count, #score-count{
+ font-size: 25px;
+ 
+ }
+
+
+
+#question_field {
+background-color: #D3D3D3;
+margin-top: 20px;
 
 }
 
-#question { /*#quiz*/
-  margin: 0;
+h3{
+font-size: 35px;
+text-align: center;
+font-family: 'Lato', sans-serif;
+margin: auto;
 
 }
 
-form {
-  background-color: #F5F5F5;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  padding: 10%;
-  border: 1px soild black;
-
+fieldset{
+border: none;
+margin: 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 0 10%;
+min-height: 500px;
+border: none; 
 }
 
 label {
-  font-size: 25px;
-  margin: auto;
+margin-bottom: 15px;
+font-size: 17px;;
+padding: 20px;
+margin-bottom: 10px;
+display: flex;
+color: black;
+text-transform: uppercase;
+cursor: pointer;
+transition: all 0.3s ease-out;
+line-height: 22px
+
+  
+}
+label.answerChoices {
+color: black;
+width: 1.1em;
+height: 1.1em;
+vertical-align: middle;
 }
 
-#score_banner {
-  background-color: #404040;
-  color: #F8F8F8;
-  font-style: bold;
-  font-size: 20px;
+ul{
+list-style-type: none;
 }
 
-#js-submit-button {
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0;
+/*feedback page */
+
+#feedback_field{
+border: none;
+margin: 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 0 10%;
+min-height: 500px;
+border: none;
+}
+
+#feedback_image{
+width: 250px;
+height: 250px;
+display: block;
+
+background-color: rgb(63, 64, 65);
+margin: auto;
+padding: 10px;
+margin-bottom: 20px
+}
+
+p{
+color: white;
+font-size: 25px;
+font-style: bold;
+}
+
+h4{
+font-size: 20px;
+margin-bottom: 0%;
+
+}
+#feedback-button {
+margin-top: 2%;
+}
+#js-next-button{
+margin-top: 2%;
+}
+
+/*results page */
+
+#results-page{
+border: none;
+margin: 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 0 10%;
+min-height: 500px;
+border: none;
 }
 
 
-.results_board {
-  text-align: center;
-  background-image: url("http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg");
+
+#restart-button{
+text-align: center;
+margin-top: 40px;
 }
