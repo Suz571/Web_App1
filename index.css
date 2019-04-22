@@ -91,6 +91,7 @@ margin-bottom: 5px;
 #question_field {
 background-color: #D3D3D3;
 margin-top: 20px;
+text-align: center;
 
 }
 
@@ -102,29 +103,19 @@ h3{
   
 }
 
-fieldset{
-  border: none;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 0 10%;
-	min-height: 500px;
-	border: none; 
-}
 
 label {
 	margin-bottom: 15px;
-  font-size: 17px;;
+  font-size: 17px;
   padding: 20px;
   margin-bottom: 10px;
-  display: flex;
+  display: inline;
   color: black;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease-out;
-  line-height: 22px
+  line-height: 22px;
+  
   
     
 }
