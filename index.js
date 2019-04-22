@@ -1,6 +1,6 @@
 function startButtonAction() {
     $('.js-start-button').click((e)=>{
-        nextQuestion();
+        quizTemplate();
     })
 }
 
@@ -25,8 +25,11 @@ function quizTemplate() {
                         </ul> 
                     </h2>           
                 </div>   
-
                 <form>
+                `<div class="question-${questionNumber}">
+                    <h3>${QUIZ[questionNumber].question}</h3>
+                </div>
+                
                     <fieldset>
                         <label class="answerChoices">
                             <input type="radio" value="${QUIZ[questionNumber].answers[0]}"
@@ -51,10 +54,7 @@ function quizTemplate() {
        // $('.questionNum').question(10)
     }
 
-    function generateQuiz(){
-        $('#js-start-button').on('click'){
-            quizTemplate()
-        }
+
     }
 
 function submitButtonAction(){

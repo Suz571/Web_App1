@@ -7,10 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100% 70%;
+
     
 }
 
@@ -41,6 +38,13 @@ font-size: 55px;
 
 .start_board{
 text-align: center;
+background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
+background-position: center top;
+background-repeat: no-repeat;
+background-size: cover;
+line-height:100px; 
+vertical-align:middle;
+
 }
 
 main {
@@ -50,15 +54,21 @@ height: 71em;
 display: flex;
 flex-direction: row;
 }
-h2 {
+
+.start_board h2 {
 font-family: 'Lato', sans-serif;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 8%;
+position: center;
+margin-top: 5%;
 margin-bottom: 5%;
 height: 5em;
 font-size: 35px;
+vertical-align: middle;
+
+
+
 }
 
 button{
@@ -99,16 +109,27 @@ margin-bottom: 5px;
 #question_field {
 background-color: #D3D3D3;
 margin-top: 20px;
+/*
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; */
 
 }
 
-h3{
+.quiz-page h3{
 font-size: 35px;
 text-align: center;
 font-family: 'Lato', sans-serif;
 margin: auto;
 
 }
+/* (h2 id= question)
+#question {
+	margin: 0;
+	background-color: rgba(255, 255, 255, .8);
+}
+*/
 
 fieldset{
 border: none;
