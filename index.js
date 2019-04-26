@@ -1,51 +1,37 @@
-//start quiz upon user clicking start button
-function runQuiz () {
-    $('.quizStart').on('click','.startButton',function(e){
-        $('.quizStart').remove();
-        $('.questionAnswerForm').css('display','block');
-        $('.questionNumber').text(1);
-    });
-}
-
+/*
 //renders in DOM
 function renderQuestion(){
     $('.questionAnswerForm').html(quizTemplate());
-}
+} */
 
-/* //start quiz?
+ //start quiz?
 
 function startButtonAction() {
     $('.js-start-button').click((e)=>{
+        $('.start_board').remove();
         quizTemplate();
     })
-} */
+} 
 
 const questionNumber = 0;
 const score = 0;
 
 //create quiz page 
 
-function quizTemplate() {
+function quizTemplate(correctAnswers, question, questionsAnswered) {
     if (questionNumber < QUIZ.length){
         return 
            ` <section class="quiz-page" role= "main">
                 <div id="score_banner">
                     <h2>
-                        <ul>
-                            <li>
-                                <span id="question-count">Question:${QUIZ.num}/10</span>
-                            </li>
-                            <li>
-                                <span id="score-count">Score: ${correctAns}/${questionsAnswered}</span>
-                            </li>
-                        </ul> 
-                    </h2>           
+                      <span id="question-count">Question:${QUIZ.num}/10</span>
+                      <span id="score-count">Score: ${correctAns}/${questionsAnswered}</span>
+                     </h2>       
                 </div>   
                 <div class="question_field">'
-                '<div class="question-${questionNumber}">
-                    <h3>${QUIZ[questionNumber].question}</h3>
-                </div>
-                
+                '   
+                    <h3 id="question">${QUIZ[questionNumber].question}</h3>
+                               
                     <p>
                         <label class="answerChoices">
                             <input type="radio" value="${QUIZ[questionNumber].answers[0]}"
@@ -78,6 +64,17 @@ function quizTemplate() {
        $('.questionNum').question(10)
     }
 }
+/*
+//start quiz upon user clicking start button
+function runQuiz () {
+    $('.start_board').on('click','.js-start-button',function(e){
+        $('.start_board').remove();
+        $('.questionAnswerForm').css('display','block');
+        $('.questionNumber').text(1);
+    });
+    renderQuestion();
+}
+*/
 
 //increment question# 
 function increaseQuestionNumber (){
@@ -101,7 +98,7 @@ function submitButtonAction(){
         const userAnswer = $('input:checked');
         //const userAnswer = selected.val();
 
-        const answerIsCorrect = '${QUIZ[questionNumber].correctAnswer}`;
+        const answerIsCorrect = "${QUIZ[questionNumber].correctAnswer}";
             if (userAnswer === correctAnswer){
                 selected.parent().addClass('correct');
                 ifUserIsCorrect();
@@ -159,19 +156,19 @@ function updateScore() {
 
 function generateResults(correctAnswers){
     $('.container').html(
-         <section class="results_board">
+         `<section class="results_board">
              <h2>
                     Final Score: ${correctAnswers} /10
              </h2>
             <button id="js-restart-button">Restart</button>
-        </section>
+        </section>`
         )
 
     }
 }
 //next button function
 function generateNextQuestion (){
-    $('.js-next-button').click((),function(event){
+    $('.js-next-button').click(function(event){
         increaseQuestionNumber();
         quizTemplate();
         userSelectAnswer(); //review
@@ -180,15 +177,15 @@ function generateNextQuestion (){
 
 //restarting the quiz
 function restartQuiz(){
-    $('.js-restart-button').click((),function(event){
+    $('.js-restart-button').click(function(event){
         location.reload();  //review
     });
 }
 
 function createQuiz(){
-    startQuiz();
+    startButtonAction();
     quizTemplate();
-    userSelectAnswer();
+    
     generateNextQuestion();
 }
 $(createQuiz);

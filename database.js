@@ -12,7 +12,7 @@ const QUIZ =[
 
     {
         num: 2,
-        question: "In 1924 what two rich University of Chicago students  murdered a 14 year old boy \"just because\"?";
+        question: "In 1924 what two rich University of Chicago students  murdered a 14 year old boy \"just because\"?",
         answers: {
             ans1: "Bonnie and Clyde",
             ans2: "Leopold and Leob",
@@ -23,7 +23,7 @@ const QUIZ =[
 
     {
         num: 3,
-        question: "What hotel can a \"Woman in Red\" be seen haunting the 10th floor after supposedly jumping to her death after discovering her philardering husband?";
+        question: "What hotel can a \"Woman in Red\" be seen haunting the 10th floor after supposedly jumping to her death after discovering her philardering husband?",
         answers: {
             ans1: "Congress Hotel",
             ans2: "Hilton",
@@ -34,7 +34,7 @@ const QUIZ =[
 
     {
         num: 4,
-        question: "\"Death Alley\", where 602 dead bodies were placed after burning to death in the new "fire proof" theatre, is located behind which modern-day theatre?";
+        question: "\"Death Alley\", where 602 dead bodies were placed after burning to death in the new \"fire proof\" theatre, is located behind which modern-day theatre?",
         answers: {
             ans1: "Globe Theatre",
             ans2: "Nederlander Theatre",
@@ -56,7 +56,7 @@ const QUIZ =[
 
     {
         num: 6,
-        question: "Roses are red, so is blood. What is was the bloodiest day in Chicago mob histroy?";
+        question: "Roses are red, so is blood. What is was the bloodiest day in Chicago mob histroy?",
         answers: {
             ans1: "St. Valentine\s Day",
             ans2: "Halloween" ,
@@ -68,7 +68,7 @@ const QUIZ =[
 
     {
         num: 7,
-        question: "Urban legend has that this house, turned museum, was once where a baby, born with scales, horns, and hooves, was abadoned and locked in the attic until its death?";
+        question: "Urban legend has that this house, turned museum, was once where a baby, born with scales, horns, and hooves, was abadoned and locked in the attic until its death?",
         answers: {
             ans1: "Driehaus House",
             ans2: "1502 N. Clark St",
@@ -90,7 +90,7 @@ const QUIZ =[
 
     {
         num: 9,
-        question: "Both Jeffery Dahmer and John Wayne Gacy have been said to frequent this Lakeview tavern";
+        question: "Both Jeffery Dahmer and John Wayne Gacy have been said to frequent this Lakeview tavern",
         answers: {
             ans1: "Richard\s bar",
             ans2: "L&L Tavern",
@@ -98,10 +98,10 @@ const QUIZ =[
         },
         correctAns: this.ans2,
     },
-
+ 
     {
         num: 10,
-        question:"This uptown lounge was Al Capone's favorite spot and has hidden tunnels and the occasional ghostly activty.";
+        question:"This uptown lounge was Al Capone's favorite spot and has hidden tunnels and the occasional ghostly activty.",
         answers: {
             ans1: "Richard\s bar",
             ans2: "L&L Tavern",
