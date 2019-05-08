@@ -81,9 +81,17 @@ $(document).ready(function(){
     function changeScore () {
       score ++;
     };
-    
-    
+
     startButtonAction();
+
+//Next actions from Submit button. Compare answer with correct answer. 
+//generate feedback. change score and question number. 
+//generate next question
+
+
+    
+    
+    
     
     })
     
