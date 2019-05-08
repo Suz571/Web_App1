@@ -84,6 +84,8 @@ $(document).ready(function(){
 
     startButtonAction();
 
+
+
 //Next actions from Submit button. Compare answer with correct answer. 
 //generate feedback. change score and question number. 
 //generate next question
@@ -159,10 +161,21 @@ function generateResults(correctAnswers){
            </h2>
           <button id="js-restart-button">Restart</button>
       </section>`
-      )
+      );
 
+      function startQuizApp() {
+        startButtonAction();
+        submitButtonAction();
+        userAnswerFeedbackCorret();
+        userAnswerFeedbackIncorrect();
+        generateResults();
+        updateScore();
 
+      }
+      startQuizApp();
       
+
+
      /*
      //next button function
 function generateNextQuestion (){
