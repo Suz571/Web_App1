@@ -91,9 +91,10 @@ $(document).ready(function(){
 //generate next question
 
 function submitButtonAction(){
-  $('.container').on('click','#js-submit-button', function(e){
+  $('.container').on('click','.submit-button', function(e){
+    console.log('a');
       e.preventDefault();
-      console.log('a');
+      
       const userAnswer = $('input:checked');
       //const userAnswer = selected.val();
       const correctAnswer = `${QUIZ[num].correctAns}`;  //scope issue?  object issue? num vs. questionNumber?
