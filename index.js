@@ -71,7 +71,7 @@ $(document).ready(function(){
     
     //increment question number //on submit button
     function changeQuestionNumber () {
-      if (questionNumber < STORE.length) {
+      if (questionNumber < QUIZ.length) {
         questionNumber ++;
       }
       $('.questionNumber').text(questionNumber+1);
@@ -91,136 +91,81 @@ $(document).ready(function(){
 //generate next question
 
 function submitButtonAction(){
-  $('.container').on('click','#js-submit-button', (e)=>{
-      e.preventDefault()
-
+  $('.container').on('click','#js-submit-button', function(e){
+      e.preventDefault();
+      console.log('a');
       const userAnswer = $('input:checked');
       //const userAnswer = selected.val();
-
-      const answerIsCorrect = "${QUIZ[questionNumber].correctAnswer}";
+      const correctAnswer = `${QUIZ[num].correctAns}`;  //scope issue?  object issue? num vs. questionNumber?
+      console.log(userAnswer === correctAnswer);
           if (userAnswer === correctAnswer){
               selected.parent().addClass('correct');
               ifUserIsCorrect();
               } else {
               selected.parent().addClass('wrong');
-              ifUserisIncorrect();         
+              ifUserisWrong();         
               }
           });
 }
 
 //if user is correct- gives correct feedback
 function ifUserIsCorrect(){
-  userAnswerFeedbackCorrect();
+  generateCorrectFeedback();
   updateScore();
 }
 
 //if user is incorrect- incorrect feedback runs
-function ifUserisIncorrect(){
-  userAnswerFeedbackIncorret();
+function ifUserisWrong(){
+  generateWrongFeedback();
 }
 
-//generates user feedback-correct
-function userAnswerFeedbackCorret(){
-  let correctAnswer = `${QUIZ[questionNumber].correctAnswer}`;
-  $('.questionAnswerForm').html(
-      `<div class="correctFeedback">
-          <p> CORRECT! </p>
-          <div class="feedback-image">
-          <img src="http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg"
-          alt="Happy ghost"/>
-          </div>
-      <button type= button class="js-next-button">NEXT</button>
-      </div>`);`
+//generates user feedback-correct             
+function generateCorrectFeedback(){
+  //let correctAnswer = `${QUIZ[questionNumber].correctAns}`;
+  const correctHtml=      
+  `<div class="Feedback">
+  <p> CORRECT! </p>
+  <div class="feedback-image">
+  <img src="http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg"
+  alt="Happy ghost"/>
+  
+  </div>
+<button type= button class="js-next-button">NEXT</button>
+</div>`
+  console.log('b');
+   $('.container').html(correctHtml);
+};`
       `
 
-//generates user feedback- incorrect
-function userAnswerFeedbackIncorrect(){
-  let correctAnswer = `${QUIZ[questionNumber].correctAnswer}`;
-  $('.questionAnswerForm').html(
-      `<div class="correctFeedback">
-          <p> CORRECT! </p>
-          <div class="feedback-image">
-          <img src="https://www.logolynx.com/images/logolynx/ad/ad5172e4d0f50b1f80da99275472c636.jpeg"
-          alt="ghost crossed out"/>
-          </div>
-      <button type= button class="js-next-button">NEXT</button>
-      </div>`);
-}
+//generates user feedback- wrong   //need to show correct answer
+function generateWrongFeedback(){
+  //let correctAnswer = `${QUIZ[questionNumber].correctAns}`;
+  console.log('c');
+  const wrongHtml=      
+  `<div class="Feedback">
+  <p> INCORRECT </p>
+  <div class="feedback-image">
+  <img src="https://www.logolynx.com/images/logolynx/ad/ad5172e4d0f50b1f80da99275472c636.jpeg"
+  alt="ghost crossed out"/>
+
+  </div>
+<button type= button class="js-next-button">NEXT</button>
+</div>`
+  $('.container').html(wrongHtml);
+};
 
 //update score banner
 function updateScore() {
+  console.log('d');
   changeScore();
   $('.score').text(score);
 }
 
-function generateResults(correctAnswers){
-  $('.container').html(
-       `<section class="results_board">
-           <h2>
-                  Final Score: ${correctAnswers} /10
-           </h2>
-          <button id="js-restart-button">Restart</button>
-      </section>`
-      );
 
-      function startQuizApp() {
-        startButtonAction();
-        submitButtonAction();
-        userAnswerFeedbackCorret();
-        userAnswerFeedbackIncorrect();
-        generateResults();
-        updateScore();
 
-      }
-      startQuizApp();
+//starts quiz
+
+startButtonAction();
+submitButtonAction();
       
-
-
-     /*
-     //next button function
-function generateNextQuestion (){
-    $('.js-next-button').click(function(event){
-        increaseQuestionNumber();
-        quizTemplate();
-        userSelectAnswer(); //review
-    });
-}
-
-//restarting the quiz
-function restartQuiz(){
-    $('.js-restart-button').click(function(event){
-        location.reload();  //review
-    });
-}
-
-function createQuiz(){
-
-    //increment question number //on submit button
-    function changeQuestionNumber () {
-      if (questionNumber < STORE.length) {
-        questionNumber ++;
-      }
-      $('.questionNumber').text(questionNumber+1);
-    }
-
-    //increment score //on submit button
-    function changeScore () {
-      score ++;
-    };
-
-
-    startButtonAction();
-    quizTemplate();
-
-    generateNextQuestion();
-}
-$(createQuiz);
     })
-    */ 
-    
-    
-    
-    
-    })
-    
-    

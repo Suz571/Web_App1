@@ -12,7 +12,7 @@ body {
 }
 
 
-.container-start{
+.container{
 height:100%;
 width: 100%;
 
@@ -20,13 +20,8 @@ width: 100%;
 
 }
 
-.question-container{
-height:100%;
-width: 100%;
 
 
-
-}
 
 header {
   
@@ -139,17 +134,6 @@ background-color: rgba(255, 255, 255, .8);
 }
 
 
-fieldset{
-border: none;
-margin: 0 auto;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 0 10%;
-min-height: 500px;
-border: none; 
-} */
 
 
 label {
