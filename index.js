@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    const questionNumber = 0;
-    const score = 0;
+    let questionNumber = 0;
+    let score = 0;
     
     function quizTemplate(){//(correctAnswers, question, questionsAnswered) {
 
@@ -10,7 +10,7 @@ $(document).ready(function(){
                 <section class="quiz-page" role= "main">
                     <div id="score_banner">
                         <h2>
-                          <span id="question-count">Question:${questionNumber}/10</span>
+                          <span id="question-count">Question:${questionNumber+1}/10</span>
                           <span id="score-count">Score: ${score}/${questionNumber}</span>
                          </h2>       
                     </div>   
@@ -53,10 +53,7 @@ $(document).ready(function(){
     function startButtonAction() {
     
       $('.container').on('click','#js-start-button',function(e){
-     
-       // $('.container-start').remove();
-        // $('.question-container').show(); 
-        $('.questionNumber').text(1);
+      $('.questionNumber').text(1);
      
         generateQuestions();
       });
@@ -89,21 +86,21 @@ $(document).ready(function(){
 //Next actions from Submit button. Compare answer with correct answer. 
 //generate feedback. change score and question number. 
 //generate next question
+function getCorrectQuizAnswer (){
+  return QUIZ[questionNumber].answers[QUIZ[questionNumber].correctAns];
+}
 
 function submitButtonAction(){
-  $('.container').on('click','.submit-button', function(e){
+  $('.container').on('click','.submit-button', function(){
     console.log('a');
-      e.preventDefault();
-      
-      const userAnswer = $('input:checked');
-      //const userAnswer = selected.val();
-      const correctAnswer = `${QUIZ[num].correctAns}`;  //scope issue?  object issue? num vs. questionNumber?
-      console.log(userAnswer === correctAnswer);
+      //e.preventDefault();
+      let userAnswer = $('input:checked').val(); //.val() gets value not just DOM node
+      console.log('b');
+      const correctAnswer = getCorrectQuizAnswer(); 
+      console.log(userAnswer, correctAnswer);
           if (userAnswer === correctAnswer){
-              selected.parent().addClass('correct');
               ifUserIsCorrect();
               } else {
-              selected.parent().addClass('wrong');
               ifUserisWrong();         
               }
           });
@@ -112,7 +109,7 @@ function submitButtonAction(){
 //if user is correct- gives correct feedback
 function ifUserIsCorrect(){
   generateCorrectFeedback();
-  updateScore();
+  changeScore();
 }
 
 //if user is incorrect- incorrect feedback runs
@@ -122,7 +119,6 @@ function ifUserisWrong(){
 
 //generates user feedback-correct             
 function generateCorrectFeedback(){
-  //let correctAnswer = `${QUIZ[questionNumber].correctAns}`;
   const correctHtml=      
   `<div class="Feedback">
   <p> CORRECT! </p>
@@ -133,16 +129,13 @@ function generateCorrectFeedback(){
   </div>
 <button type= button class="js-next-button">NEXT</button>
 </div>`
-  console.log('b');
    $('.container').html(correctHtml);
 };`
       `
 
 //generates user feedback- wrong   //need to show correct answer
 function generateWrongFeedback(){
-  //let correctAnswer = `${QUIZ[questionNumber].correctAns}`;
-  console.log('c');
-  const wrongHtml=      
+   const wrongHtml=      
   `<div class="Feedback">
   <p> INCORRECT </p>
   <div class="feedback-image">
@@ -156,17 +149,28 @@ function generateWrongFeedback(){
 };
 
 //update score banner
+/*
 function updateScore() {
-  console.log('d');
   changeScore();
-  $('.score').text(score);
+  $('#score-count').text(score);
 }
+*/
 
+
+//next button. generates new question. shows updated score banner and question count. 
+function nextButtonAction(){
+  $('.container').on('click','.js-next-button', function(){
+       changeQuestionNumber(); 
+       generateQuestions();
+
+  })
+}
 
 
 //starts quiz
 
 startButtonAction();
 submitButtonAction();
+nextButtonAction();
       
     })
