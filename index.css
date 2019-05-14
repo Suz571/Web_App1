@@ -109,12 +109,6 @@ font-size: 25px;
 #question_field {
 background-color: #D3D3D3;
 margin-top: 20px;
-/*
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-between; */
-
 }
 
 .quiz-page h3{
@@ -124,10 +118,6 @@ font-family: 'Lato', sans-serif;
 margin: auto;
 
 }
-
-
-
-
 
 label {
 margin-bottom: 15px;
@@ -141,11 +131,7 @@ cursor: pointer;
 transition: all 0.3s ease-out;
 line-height: 22px;
 text-align: center;
-
-
 }
-
-
 
 /*feedback page */
 
@@ -200,24 +186,9 @@ margin-top: 2%;
 #js-next-button{
 margin-top: 2%;
 }
+/*CSS for phone screen */
+@media screen and (min-width: 320px) {
+  body{display:block;}
+  h1{font-size:30px;}
+ }
 
-/*results page */
-
-#results-page{
-border: none;
-margin: 0 auto;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-padding: 0 10%;
-min-height: 500px;
-border: none;
-}
-
-
-
-#restart-button{
-text-align: center;
-margin-top: 40px;
-}
