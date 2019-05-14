@@ -29,8 +29,8 @@ margin-right: auto;
 margin-top: .5em;
 height: 5em;
 background: #939393;
-
 }
+
 h1 {
 font-family: 'Oswald', sans-serif;
 font-size: 55px;
@@ -44,11 +44,9 @@ background-repeat: no-repeat;
 background-size: cover;
 line-height:100px; 
 vertical-align:middle;
-
 }
 
 main {
-
 background: #e8e8e8;		
 height: 71em;
 display: flex;
@@ -66,9 +64,6 @@ margin-bottom: 5%;
 height: 5em;
 font-size: 35px;
 vertical-align: middle;
-
-
-
 }
 
 button{
@@ -189,6 +184,6 @@ margin-top: 2%;
 /*CSS for phone screen */
 @media screen and (min-width: 320px) {
   body{display:block;}
-  h1{font-size:30px;}
+  h1{font-size:35px;}
  }
 

@@ -1,11 +1,9 @@
 $(document).ready(function(){
+ 
 
     let questionNumber = 0;
     let score = 0;
-
-
-
-    
+  
     function quizTemplate(){//(correctAnswers, question, questionsAnswered) {
 
         if (questionNumber < QUIZ.length){
@@ -49,14 +47,13 @@ $(document).ready(function(){
                
         } else {
             generateResults();
-            reStartQuiz();
-           $('.questionNumber').text(10)
+            
         }
     }
     function startButtonAction() {
     
       $('.container').on('click','#js-start-button',function(e){
-      $('.questionNumber').text(1);
+      
      
         generateQuestions();
       });
@@ -74,17 +71,13 @@ $(document).ready(function(){
       if (questionNumber < QUIZ.length) {
         questionNumber ++;
       }
-      $('.questionNumber').text(questionNumber+1);
+      
     }
     
     //increment score //on submit button
     function changeScore () {
       score ++;
     };
-
-    startButtonAction();
-
-
 
 //Next actions from Submit button. Compare answer with correct answer. 
 //generate feedback. change score and question number. 
@@ -173,7 +166,7 @@ function generateResults(){
     `<div class= "Results">
         <div id="score_banner">
            <h2>
-              <span id="question-count">Question:${questionNumber+1}/10</span>
+              <span id="question-count">Question:${questionNumber}/10</span>
               <span id="score-count">Score: ${score}/${questionNumber}</span>
             </h2> 
         </div>      
@@ -186,7 +179,9 @@ function generateResults(){
 
 function reStartQuiz(){
     $('.container').on('click','.restart-button',function(e){
-   startButtonAction();
+      questionNumber = 0;
+      score = 0;
+    generateQuestions();
   });
 };
 
@@ -195,5 +190,6 @@ function reStartQuiz(){
 startButtonAction();
 submitButtonAction();
 nextButtonAction();
+reStartQuiz();
       
     })
