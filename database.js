@@ -68,7 +68,7 @@ const QUIZ =[
 
     {
       
-        question: "Urban legend has that this house, turned museum, was once where a baby, born with scales, horns, and hooves, was abadoned and locked in the attic until its death?",
+        question: "Urban legend has that this house, turned museum, was once where a baby; born with scales, horns, and hooves was abadoned and locked in the attic until its death?",
         answers: {
             ans1: "Driehaus House",
             ans2: "1502 N. Clark St",
@@ -107,6 +107,6 @@ const QUIZ =[
             ans2: "L&L Tavern",
             ans3: "Green Mill Cocktail Lounge",
         },
-        correctAns: "ans1",
+        correctAns: "ans3",
     }    
 ]

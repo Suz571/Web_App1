@@ -2,6 +2,9 @@ $(document).ready(function(){
 
     let questionNumber = 0;
     let score = 0;
+
+
+
     
     function quizTemplate(){//(correctAnswers, question, questionsAnswered) {
 
@@ -92,12 +95,9 @@ function getCorrectQuizAnswer (){
 
 function submitButtonAction(){
   $('.container').on('click','.submit-button', function(){
-    console.log('a');
       //e.preventDefault();
       let userAnswer = $('input:checked').val(); //.val() gets value not just DOM node
-      console.log('b');
       const correctAnswer = getCorrectQuizAnswer(); 
-      console.log(userAnswer, correctAnswer);
           if (userAnswer === correctAnswer){
               ifUserIsCorrect();
               } else {
@@ -122,9 +122,10 @@ function generateCorrectFeedback(){
   const correctHtml=      
   `<div class="Feedback">
   <p> CORRECT! </p>
-  <div class="feedback-image">
+  <div class="feedback_image">
   <img src="http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg"
   alt="Happy ghost"/>
+  <p> '${QUIZ[questionNumber].answers[QUIZ[questionNumber].correctAns]}'</p>
   
   </div>
 <button type= button class="js-next-button">NEXT</button>
@@ -138,10 +139,10 @@ function generateWrongFeedback(){
    const wrongHtml=      
   `<div class="Feedback">
   <p> INCORRECT </p>
-  <div class="feedback-image">
+  <div class="feedback_image">
   <img src="https://www.logolynx.com/images/logolynx/ad/ad5172e4d0f50b1f80da99275472c636.jpeg"
   alt="ghost crossed out"/>
-
+  <p> '${QUIZ[questionNumber].answers[QUIZ[questionNumber].correctAns]}'</p>
   </div>
 <button type= button class="js-next-button">NEXT</button>
 </div>`
@@ -164,8 +165,30 @@ function nextButtonAction(){
        generateQuestions();
 
   })
-}
+};
 
+    //results page
+function generateResults(){
+  const resultsHtml =
+    `<div class= "Results">
+        <div id="score_banner">
+           <h2>
+              <span id="question-count">Question:${questionNumber+1}/10</span>
+              <span id="score-count">Score: ${score}/${questionNumber}</span>
+            </h2> 
+        </div>      
+        <p>Great Job!</p>
+        <button type= button class="restart-button">Restart</button>
+    </div>`;
+    
+  $('.container').html(resultsHtml);
+};
+
+function reStartQuiz(){
+    $('.container').on('click','.restart-button',function(e){
+   startButtonAction();
+  });
+};
 
 //starts quiz
 
