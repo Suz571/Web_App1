@@ -20,8 +20,7 @@ text-align: center;
 
 }
 
-header {
-  
+header {  
 width: 98%;
 text-align: center;
 margin-left: auto;
@@ -33,7 +32,6 @@ background: #939393;
 
 h1 {
 font-family: 'Oswald', sans-serif;
-font-size: 55px;
 }
 
 .start_board{
@@ -66,6 +64,7 @@ font-size: 35px;
 vertical-align: middle;
 }
 
+
 button{
 /*display: block;*/ 
 min-height: 80px;
@@ -73,7 +72,7 @@ min-width: 80px;
 margin-bottom: 1.5em;
 font-size: 2em;
 border: none;
-background-color: #484848;
+background-color: rgba(0, 0, 0, 0.925);
 color:	#F0F0F0;
 border-radius: 5px;
 padding: .5em 1em;
@@ -135,7 +134,7 @@ text-align: center;
 display: block;
 margin: auto;
 padding: 10px;
-margin-bottom: 20px
+margin-bottom: 15px
 }
 
 .Feedback img {
@@ -181,9 +180,14 @@ margin-top: 2%;
 #js-next-button{
 margin-top: 2%;
 }
+
 /*CSS for phone screen */
 @media screen and (min-width: 320px) {
   body{display:block;}
   h1{font-size:35px;}
  }
 
+ @media screen and (min-width: 768px){
+   body{display:block;}
+   h1{font-size:55px;}
+ }

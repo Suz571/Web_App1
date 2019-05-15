@@ -15,34 +15,34 @@ $(document).ready(function(){
                           <span id="score-count">Score: ${score}/${questionNumber}</span>
                          </h2>       
                     </div>   
-                    <div class="question_field">'
+                    <form class="question_field">'
                     '   
                         <h3 id="question">${QUIZ[questionNumber].question}</h3>
-                                   
-                        <p>
+                        <fieldset>           
+                        
                             <label class="answerChoices">
                                 <input type="radio" value="${QUIZ[questionNumber].answers.ans1}"
                                 name="answer" required></input>
                                 <span>${QUIZ[questionNumber].answers.ans1} </span>
                             </label>
-                         </p>
-                         <p>
+                         
+                         
                             <label class="answerChoices">
                                 <input type="radio" value="${QUIZ[questionNumber].answers.ans2}"
                                 name="answer" required></input>
                                 <span>${QUIZ[questionNumber].answers.ans2} </span>
                             </label>
-                        </p>
-                        <p>
+                      
+                        
                             <label class="answerChoices">
                                 <input type="radio" value="${QUIZ[questionNumber].answers.ans3}"
                                 name="answer" required></input>
                                 <span>${QUIZ[questionNumber].answers.ans3} </span>
                             </label>
-                        </p>
-                        <button type="submit" class="submit-button">Submit</button>
                         
-                    </div>                    
+                        <button type="submit" class="submit-button">Submit</button>
+                        </fieldset>
+                    </form>                    
                 </section>;`
                
         } else {
