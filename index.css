@@ -140,6 +140,7 @@ margin-bottom: 15px
 .Feedback img {
 max-width: 250px;
 max-height: 250px;
+border: black solid 5px;
 }
 
 .Feedback p{
