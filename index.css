@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     box-sizing: border-box;
 }
 
@@ -6,3 +7,197 @@ main {
 font-family: 'Lato', sans-serif;
 font-family: 'Oswald', sans-serif;
 }
+=======
+  box-sizing: border-box;
+  
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+
+.container{
+display: block;
+height:100%;
+width: 100%;
+text-align: center;
+
+}
+
+header {  
+width: 98%;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: .5em;
+height: 5em;
+background: #939393;
+}
+
+h1 {
+font-family: 'Oswald', sans-serif;
+}
+
+.start_board{
+text-align: center;
+background-image: url("https://m.cloud9living.com/blog/wp-content/uploads/2017/10/13-Most-Haunted-Places-in-Chicago-featured-image.jpg");
+background-position: center top;
+background-repeat: no-repeat;
+background-size: cover;
+line-height:100px; 
+vertical-align:middle;
+}
+
+main {
+background: #e8e8e8;		
+height: 71em;
+display: flex;
+flex-direction: row;
+}
+
+.start_board h2 {
+font-family: 'Lato', sans-serif;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+position: center;
+margin-top: 5%;
+margin-bottom: 5%;
+height: 5em;
+font-size: 35px;
+vertical-align: middle;
+}
+
+
+button{
+/*display: block;*/ 
+min-height: 80px;
+min-width: 80px;
+margin-bottom: 1.5em;
+font-size: 2em;
+border: none;
+background-color: rgba(0, 0, 0, 0.925);
+color:	#F0F0F0;
+border-radius: 5px;
+padding: .5em 1em;
+width: 60%;
+max-width: 200px;
+margin-top: 8%;
+}
+
+/*question page */
+
+
+#score_banner{
+display: block;  
+text-align: center;
+margin: auto;
+padding-bottom: 5px;
+margin-bottom: 5px;
+
+
+}
+#question-count, #score-count{
+font-size: 25px;
+
+}
+
+
+
+#question_field {
+background-color: #D3D3D3;
+margin-top: 20px;
+}
+
+.quiz-page h3{
+font-size: 35px;
+text-align: center;
+font-family: 'Lato', sans-serif;
+margin: auto;
+
+}
+
+label {
+margin-bottom: 15px;
+font-size: 20px;;
+padding: 20px;
+margin-bottom: 10px;
+display: block;
+color: black;
+text-transform: uppercase;
+cursor: pointer;
+transition: all 0.3s ease-out;
+line-height: 22px;
+text-align: center;
+}
+
+/*feedback page */
+
+
+.feedback_image{
+display: block;
+margin: auto;
+padding: 10px;
+margin-bottom: 15px
+}
+
+.Feedback img {
+max-width: 250px;
+max-height: 250px;
+}
+
+.Feedback p{
+color: #484848;
+font-size: 30px;
+font-style: bold;
+}
+.Results p{
+color:white;
+font-family: 'Lato', sans-serif;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+position: center;
+margin-top: 5%;
+margin-bottom: 5%;
+height: 5em;
+font-size: 35px;
+vertical-align: middle;
+}
+.Results {
+  text-align: center;
+  background-image: url("https://www.hauntedrooms.com/wp-content/uploads/2018/02/chicago-haunted-hotels.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height:100px; 
+  vertical-align:middle;
+}
+h4{
+font-size: 20px;
+margin-bottom: 0%;
+
+}
+#feedback-button {
+margin-top: 2%;
+}
+#js-next-button{
+margin-top: 2%;
+}
+
+/*CSS for phone screen */
+@media screen and (min-width: 320px) {
+  body{display:block;}
+  h1{font-size:35px;}
+ }
+
+ @media screen and (min-width: 768px){
+   body{display:block;}
+   h1{font-size:55px;}
+ }
+>>>>>>> 4124bd3e1fc75518a6f206cd6b19b045e4156e41
