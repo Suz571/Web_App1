@@ -1,83 +1,69 @@
-$(document).ready(function(){
- 
+$(document).ready(function(){ 
 
-    let questionNumber = 0;
-    let score = 0;
+let questionNumber = 0;
+let score = 0;
   
-    function quizTemplate(){//(correctAnswers, question, questionsAnswered) {
+function quizTemplate(){
 
-        if (questionNumber < QUIZ.length){
-            return `
-                <section class="quiz-page" role= "main">
-                    <div id="score_banner">
-                        <h2>
-                          <span id="question-count">Question:${questionNumber+1}/10</span>
-                          <span id="score-count">Score: ${score}/${questionNumber}</span>
-                         </h2>       
-                    </div>   
-                    <form class="question_field">'
-                    '   
-                        <h3 id="question">${QUIZ[questionNumber].question}</h3>
-                        <fieldset>           
-                        
-                            <label class="answerChoices">
-                                <input type="radio" value="${QUIZ[questionNumber].answers.ans1}"
-                                name="answer" required></input>
-                                <span>${QUIZ[questionNumber].answers.ans1} </span>
-                            </label>
-                         
-                         
-                            <label class="answerChoices">
-                                <input type="radio" value="${QUIZ[questionNumber].answers.ans2}"
-                                name="answer" required></input>
-                                <span>${QUIZ[questionNumber].answers.ans2} </span>
-                            </label>
-                      
-                        
-                            <label class="answerChoices">
-                                <input type="radio" value="${QUIZ[questionNumber].answers.ans3}"
-                                name="answer" required></input>
-                                <span>${QUIZ[questionNumber].answers.ans3} </span>
-                            </label>
-                        
-                        <button type="submit" class="submit-button">Submit</button>
-                        </fieldset>
-                    </form>                    
-                </section>;`
+if (questionNumber < QUIZ.length){
+  return `
+    <section class="quiz-page" role= "main">
+      <div id="score_banner">
+        <h2>
+           <span id="question-count">Question:${questionNumber+1}/10</span>
+            <span id="score-count">Score: ${score}/${questionNumber}</span>
+         </h2>       
+       </div>   
+      <form class="question_field">'                    '   
+        <h3 id="question">${QUIZ[questionNumber].question}</h3>
+        <fieldset>           
+          <label class="answerChoices">
+            <input type="radio" value="${QUIZ[questionNumber].answers.ans1}"
+              name="answer" required></input>
+            <span>${QUIZ[questionNumber].answers.ans1} </span>
+            </label>                                 
+            <label class="answerChoices">
+               <input type="radio" value="${QUIZ[questionNumber].answers.ans2}"
+                  name="answer" required></input>
+                <span>${QUIZ[questionNumber].answers.ans2} </span>
+            </label>                       
+            <label class="answerChoices">
+              <input type="radio" value="${QUIZ[questionNumber].answers.ans3}"
+                name="answer" required></input>
+              <span>${QUIZ[questionNumber].answers.ans3} </span>
+            </label>
+            <button type="submit" class="submit-button">Submit</button>
+          </fieldset>
+       </form>                    
+    </section>;`
                
-        } else {
-            generateResults();
-            
-        }
-    }
-    function startButtonAction() {
-    
-      $('.container').on('click','#js-start-button',function(e){
-      
-     
-        generateQuestions();
-      });
-      
-    }
-    
-    function generateQuestions(){
-        const quizHtml = quizTemplate();
-     
-      $('.container').html(quizHtml);
-    }
+  } else {
+  generateResults();
+  }
+}
+
+function startButtonAction() {
+  $('.container').on('click','#js-start-button',function(e){
+    generateQuestions();
+  });
+}
+
+function generateQuestions(){
+  const quizHtml = quizTemplate();
+  $('.container').html(quizHtml);
+}
     
     //increment question number //on submit button
-    function changeQuestionNumber () {
-      if (questionNumber < QUIZ.length) {
-        questionNumber ++;
-      }
-      
-    }
+function changeQuestionNumber () {
+ if (questionNumber < QUIZ.length) {
+  questionNumber ++;
+  }  
+}
     
     //increment score //on submit button
-    function changeScore () {
-      score ++;
-    };
+function changeScore () {
+ score ++;
+};
 
 //Next actions from Submit button. Compare answer with correct answer. 
 //generate feedback. change score and question number. 
@@ -89,14 +75,14 @@ function getCorrectQuizAnswer (){
 function submitButtonAction(){
   $('.container').on('click','.submit-button', function(){
       //e.preventDefault();
-      let userAnswer = $('input:checked').val(); //.val() gets value not just DOM node
-      const correctAnswer = getCorrectQuizAnswer(); 
-          if (userAnswer === correctAnswer){
-              ifUserIsCorrect();
-              } else {
-              ifUserisWrong();         
-              }
-          });
+  let userAnswer = $('input:checked').val(); //.val() gets value not just DOM node
+  const correctAnswer = getCorrectQuizAnswer(); 
+    if (userAnswer === correctAnswer){
+      ifUserIsCorrect();
+      } else {
+      ifUserisWrong();         
+      }
+    });
 }
 
 //if user is correct- gives correct feedback
