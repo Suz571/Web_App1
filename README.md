@@ -22,9 +22,6 @@ Follow a11y best practices.
 Refer back to the checkpoints on accessibility and forms for help.
 Use responsive design.
 Be fully usable by keyboard (which will be easy enough if you start with a form).
-<<<<<<< HEAD
-=======
-
 
 Quiz Questions and Answers:
 Chicago Haunted History
@@ -60,4 +57,4 @@ https://www.logolynx.com/images/logolynx/ad/ad5172e4d0f50b1f80da99275472c636.jpe
 
 Correct ghost image:
 http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg
->>>>>>> 4124bd3e1fc75518a6f206cd6b19b045e4156e41
+
