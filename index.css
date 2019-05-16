@@ -41,6 +41,8 @@ background-repeat: no-repeat;
 background-size: cover;
 line-height:100px; 
 vertical-align:middle;
+background-color: rgba(255, 255, 255, 0.3);
+background-blend-mode: lighten;
 }
 
 main {
@@ -144,7 +146,7 @@ font-style: bold;
 
 /*results page*/
 .Results p{
-color:white;
+color:black;
 font-family: 'Oswald', sans-serif;
 text-align: center;
 margin-left: auto;
@@ -153,10 +155,11 @@ position: center;
 margin-top: 5%;
 margin-bottom: 0%;
 height: 5em;
-font-size: 45px;
+font-size: 50px;
+font-weight: 700;
 vertical-align: middle;
 }
-.Results {
+.Results{
   text-align: center;
   background-image: url("https://www.hauntedrooms.com/wp-content/uploads/2018/02/chicago-haunted-hotels.jpg");
   background-position: center top;
@@ -164,13 +167,26 @@ vertical-align: middle;
   background-size: cover;
   line-height:100px; 
   vertical-align:middle;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
 }
 .Results #score_banner{
   font-size: 35px;
-  color: whitesmoke;
-}
+  text-align: center;
+  
+}/*
+.display{
+  background-color: whitesmoke;
+  opacity: 0.5;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}*/
 button.restart-button{
   margin-top:0;
+  background-color: black;
 }
 h4{
 font-size: 20px;

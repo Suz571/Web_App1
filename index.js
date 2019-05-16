@@ -149,7 +149,8 @@ function nextButtonAction(){
     //results page
 function generateResults(){
   const resultsHtml =
-    `<div class= "Results">
+    `<div class= "Results"> 
+      <div class="display">     
         <div id="score_banner">
            <h2>
               <span id="question-count">Question:${questionNumber}/10</span>
@@ -158,7 +159,8 @@ function generateResults(){
         </div>      
         <p>Great Job!</p>
         <button type= button class="restart-button">Restart</button>
-    </div>`;
+       </div>
+      </div>`;
     
   $('.container').html(resultsHtml);
 };
