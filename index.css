@@ -174,16 +174,7 @@ vertical-align: middle;
   font-size: 35px;
   text-align: center;
   
-}/*
-.display{
-  background-color: whitesmoke;
-  opacity: 0.5;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  display: block;
-}*/
+}
 button.restart-button{
   margin-top:0;
   background-color: black;
