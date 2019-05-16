@@ -14,7 +14,7 @@ if (questionNumber < QUIZ.length){
             <span id="score-count">Score: ${score}/${questionNumber}</span>
          </h2>       
        </div>   
-      <form class="question_field">'                    '   
+      <form class="question_field">  
         <h3 id="question">${QUIZ[questionNumber].question}</h3>
         <fieldset>           
           <label class="answerChoices">
@@ -35,7 +35,7 @@ if (questionNumber < QUIZ.length){
             <button type="submit" class="submit-button">Submit</button>
           </fieldset>
        </form>                    
-    </section>;`
+    </section>`
                
   } else {
   generateResults();
@@ -102,7 +102,7 @@ function generateCorrectFeedback(){
   `<div class="Feedback">
   <p> CORRECT! </p>
   <div class="feedback_image">
-  <img src="http://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg"
+  <img src="https://worldartsme.com/images/halloween-happy-ghost-clipart-1.jpg"
   alt="Happy ghost"/>
   <p> '${QUIZ[questionNumber].answers[QUIZ[questionNumber].correctAns]}'</p>
   
